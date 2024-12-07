@@ -81,11 +81,19 @@ def read_dec07()->Eqns:
     return format_eqns(result)
 
 
+operators_b = [lambda a, b: a + b, lambda a, b: a * b, lambda a,b:int(str(a)+str(b))]
+
+
+def test_dec07b():
+    assert dec07(test_eqns,operators_b)==11387
+
+
 def main():
     test_dec07a()
     eqns=read_dec07()
     print(dec07(eqns,operators_a))
     test_dec07b()
+    print(dec07(eqns,operators_b))
 
 
 if __name__ == "__main__":
