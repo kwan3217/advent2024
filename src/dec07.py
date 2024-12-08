@@ -56,6 +56,7 @@ def check_one_eqn(*args,operators:Operators)->bool:
             this_result=operator(this_result,term)
         if this_result==answer:
             return True
+    return False
 
 
 operators_a = [lambda a, b: a + b, lambda a, b: a * b]
